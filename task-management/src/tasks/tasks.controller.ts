@@ -9,7 +9,6 @@ import {
   Query,
 } from '@nestjs/common';
 import { TasksService } from './tasks.service';
-import { TaskStatus } from './task-status.enum';
 import { CreateTaskDto } from './dto/create-task.dto';
 import { SearchFilterDto } from './dto/search-filter.dto';
 import { UpdateStatusDto } from './dto/update-status.dto';
@@ -21,7 +20,7 @@ export class TasksController {
 
   @Get()
   getTasks(@Query() searchFilterDto: SearchFilterDto): Promise<Task[]> {
-      return this.taskService.getTasks(searchFilterDto);
+    return this.taskService.getTasks(searchFilterDto);
   }
 
   @Get('/:id')
