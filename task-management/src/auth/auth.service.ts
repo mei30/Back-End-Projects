@@ -10,7 +10,6 @@ import { AuthCredentialsDto } from './dto/auto-credentials.dto';
 import { User } from './user.entity';
 
 import * as bcrypt from 'bcrypt';
-import { Task } from 'src/tasks/dto/task.entity';
 import { JwtService } from '@nestjs/jwt';
 import { JwtPayload } from './jwt-payload.interface';
 
